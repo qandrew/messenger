@@ -31,8 +31,8 @@ class MessengerParser():
 
     messages = self.soup.find_all('div', class_ = 'message')
 
-    for m in messages:
-      # metadata
+    for m in reversed(messages):
+      # get messages in chronological order
       user = m.find('span', class_ = 'user').get_text()
       time = m.find('span', class_ = 'meta').get_text()
       time = self.__parseTimestamp(time)

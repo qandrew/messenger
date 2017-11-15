@@ -10,9 +10,11 @@ Dependencies
 
 ## How to run
 first, do `python SetubDB.py`
+
 then run `python Parser.py`
 
 ## Todo
 - [ ] create parser
+- [ ] use [fbchat](https://github.com/carpedm20/fbchat)?
 - [ ] setup data structure
-- [ ] scrape messenger pictures
+- [ ] scrape messenger pictures (via fbchat)

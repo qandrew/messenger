@@ -50,3 +50,28 @@ class DatabaseManager():
       print "Unexpected error:", sys.exc_info()[0]
       raise
 
+  def getMessages(self,id):
+    # get messages
+    pass
+
+  def deleteMessages(self,id):
+    # delete the message and its corresponding value inside conversations
+    try:
+      conn = sqlite3.connect(self.dbName)
+      c = conn.cursor()
+
+      query = "DROP TABLE m" + id
+      c.execute(query)
+
+      query = "DELETE from conversations where id =?"
+      c.execute(query,(id))
+
+      conn.commit()
+      conn.close()
+    except:
+      print "Unexpected error:", sys.exc_info()[0]
+      raise
+
+  def getCursor(self):
+    conn = sqlite3.connect(self.dbName)
+    return conn.cursor()

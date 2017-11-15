@@ -5,6 +5,7 @@
     - columns:
       - ID
       - participants (probably should use ID)
+        - TODO: names are not unique
       - platform (messenger, whatsApp, etc)
   - a messages table
     - tablename should be the message ID?, prefixed with "m"

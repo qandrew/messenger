@@ -3,16 +3,16 @@
 # message
 
 class Message:
-    def __init__(self, user, timestamp, text):
-        self.user = user
-        self.timestamp = timestamp
+    def __init__(self, sender, ts, text):
+        self.sender = sender
+        self.ts = ts #timestamp
         self.text = text
 
     def __str__(self):
-        return str(self.timestamp) + '; ' + self.user.encode('utf-8') + ': ' + self.text.encode('utf-8')
+        return str(self.ts) + '; ' + self.sender.encode('utf-8') + ': ' + self.text.encode('utf-8')
     
     def __eq__(self, other):
-        return (self.user, self.timestamp, self.text) == (other.user, other.timestamp, other.text)
+        return (self.sender, self.ts, self.text) == (other.sender, other.ts, other.text)
 
     def __ne__(self, other):
         return not self.__eq__(other)

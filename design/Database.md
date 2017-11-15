@@ -1,0 +1,21 @@
+# Database Design
+
+- tables
+  - all_conversations
+    - columns:
+      - ID
+      - participants (probably should use ID)
+      - platform (messenger, whatsApp, etc)
+  - a messages table
+    - tablename should be the message ID?, prefixed with "m"
+    - columns:
+      - ID,
+      - message
+      - from
+      - time
+      - attachment?
+  - participants
+    - should this table exist?
+    - columns
+      - name
+      - ID
